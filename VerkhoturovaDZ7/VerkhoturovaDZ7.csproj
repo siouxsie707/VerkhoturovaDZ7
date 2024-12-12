@@ -43,8 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClassEployee.cs" />
+    <Compile Include="ClassEmployee.cs" />
+    <Compile Include="ClassManager.cs" />
     <Compile Include="ClassTask.cs" />
+    <Compile Include="ClassWorker.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

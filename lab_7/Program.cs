@@ -59,11 +59,41 @@ namespace lab_7
             try
             {
                 // null
-                Console.WriteLine("Тест 7: " + ReverseString(null));
+                Console.WriteLine("7: " + ReverseString(null));
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Ошибка: {ex.Message}");
+            }
+
+            // Упражнение 8.3
+            bool ImplementsIFormattable(object obj)
+            {
+                if (obj is IFormattable)
+                {
+                    return true;
+                }
+
+                return false;
+            }
+
+            Console.WriteLine("Упражнение 8.3");
+            int number = 123;
+            DateTime dateTime = DateTime.Now;
+            string text = "Hello, World!";
+            double doubleValue = 45.67;
+
+            // Проверка IFormattable
+            Console.WriteLine($"Число: {ImplementsIFormattable(number)}"); 
+            Console.WriteLine($"Дата и время: {ImplementsIFormattable(dateTime)}"); 
+            Console.WriteLine($"Текст: {ImplementsIFormattable(text)}");
+            Console.WriteLine($"Число с плавающей точкой: {ImplementsIFormattable(doubleValue)}");
+
+            // Использование оператора as
+            IFormattable formattableObject = dateTime as IFormattable;
+            if (formattableObject != null)
+            {
+                Console.WriteLine($"Форматированная дата: {formattableObject.ToString("d", null)}");
             }
         }
     }
