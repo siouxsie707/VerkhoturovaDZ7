@@ -15,8 +15,8 @@ namespace lab_7
             for (int i = 0; i < 4; i++)
             {
                 Song song = new Song();
-                song.SetName($"Song {i + 1}");
-                song.SetAuthor($"Author {i + 1}");
+                song.SetName($"Песня {i + 1}");
+                song.SetAuthor($"Автор {i + 1}");
                 songs.Add(song);
             }
 
